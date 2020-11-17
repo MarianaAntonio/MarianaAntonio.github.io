@@ -1,0 +1,38 @@
+<!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>15 de novembro, Aula 04 - Atividade 01</title>
+    </head>
+    <body>
+        <ul id="Lista"></ul>
+        <p id="msg"></p>
+    </body>
+    <script>
+       var endereco=
+        {
+          rua: "Rua dos pinheiros",
+          numero:"1293",
+          bairro: "Centro",
+          cidade: "São Paulo",  
+          uf: "SP",
+            
+        }
+        var resultado= " O usuário mora em";
+        resultado+= endereco.cidade;
+        resultado+= "/";
+        resultado+= endereco.uf;
+        resultado+= ", no bairo";
+        resultado+= endereco.bairro;
+        resultado+= ", na"
+        resultado+= endereco.rua;
+        resultado+= "com o nº"
+        resultado+= endereco.numero;
+        resultado+=".";
+        document.getElementById("msg").innerHTML = resultado;
+    
+        
+    </script>
+    </html>
+
+    

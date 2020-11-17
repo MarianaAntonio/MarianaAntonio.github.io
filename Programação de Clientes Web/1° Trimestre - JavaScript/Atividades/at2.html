@@ -1,0 +1,33 @@
+<!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>15 de novembro, Aula 04 - Atividade 02</title>
+    </head>
+    <body>
+        <ul id="lista"></ul>
+    </body>
+    <script>
+       function pares(x, y)
+        { 
+            var pares= [];
+            for(i=x; i<=y; i++)
+            {
+                if(i%2==0){
+                pares.push(i);
+                }
+                
+            }
+            return pares.toString();
+        }
+                var result = pares(32, 321);
+                var resultado_array = result.split(",");
+                    resultado_array.forEach(function(numero) {
+                var element_li = document.createElement("LI"); 
+                    element_li.innerHTML = numero;
+                    document.getElementById("lista").appendChild(element_li);
+            });
+    </script>
+    </html>
+
+    
