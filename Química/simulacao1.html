@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./estilosimulacao.css" media="screen"/>
+</head>
+<body>
+    <h1>Conversão do Cobre (Cu)</h1>
+    <h2>Entenda sobre reações teóricas em estequiometria!</h2>
+    <h3>O que é mol?</h3> 
+    <p>Mol é uma unidade de medida utilizada para expressar a quantidade de matéria microscópica, como átomos e moléculas.
+    <h3>Relação entre mol e massa</h3>
+    <p>A relação entre mol e massa depende da massa atômica (encontrada na Tabela Periódica) de um elemento ou da massa molecular de uma substância.
+   Quando relacionadas com o mol, tanto a massa atômica quanto a massa molecular são trabalhadas na unidade grama.</p>
+    <h2>Conversão de massa para mol (em gramas)</h2>
+    <input type="number" id="ip_real" placeholder="Digite gramas"/>
+    <button onClick="converte2()"><strong>Converter</strong></button>
+    <h2 id="result2"></h2>
+    <h2>Conversão de mol para massa</h2>
+    <input type="number" id="ip_real2"placeholder="Digite quantidade de mol"/>
+    <button onClick="converte()"><strong>Converter</strong></button>
+    <h2 id="result"></h2>
+</body>
+<script>
+    function converte(){
+        var gramas= 63.546;
+        var mol= parseFloat(document.getElementById("ip_real2").value);
+        var y= mol*gramas;
+        if(mol==1)
+            var result= "63.546 - 1 mol<br>" + " x - " + mol + "<br>63.546. " + mol + "= 1. x<br> x = 63.546. " + mol + "/1<br>" + mol + " mol de Cu equivale a " + y + " gramas";
+        else{
+            result= "63.546 - 1 mol<br>" + " x - " + mol + "<br>63.546. " + mol + "= 1. x<br> x = 63.546. " + mol + "/1<br>" + mol + " mol de Cu equivalem a " + y + " gramas";
+        }
+        document.getElementById("result").innerHTML = result;
+    }  
+    function converte2(){
+        var gramas=63.546;
+        var massa=parseFloat(document.getElementById("ip_real").value);
+        var x= massa/gramas;
+        if(massa==1)
+            var result2= "63.546 - 1 mol<br>" + massa + " - x<br>" + "63.546.x = 1. " + massa + "<br>" + "x = 1. " + massa + " /63.546<br>" + massa + " grama de Cu equivale a " + x + " mol";
+        else{
+            result2=" 63.546 " + " - 1 mol<br>" + massa + "- x<br>" + "63.546. x = 1. " + massa + "<br>" + "x = 1. " + massa + " /63.546<br>" + massa + " gramas de Cu equivalem a " + x + " mols";
+        }
+        document.getElementById("result2").innerHTML=result2;
+        }
+</script>
+<p>fonte:https://brasilescola.uol.com.br/o-que-e/quimica/o-que-e-mol.html</p>
+</html>

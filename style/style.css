@@ -1,0 +1,6 @@
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  row-gap: 20px;
+  grid-template-rows: repeat(auto, 1fr);
+}

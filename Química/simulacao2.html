@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./estilosimulacao.css" media="screen"/>
+</head>
+<body>
+    <h1>Correlações entre reagentes e produtos da água (H20)</h1>
+    <h4 class="fonte">As correlações em química podem ser definidas como a quantidade de um elemento da tabela periódica em uma determinada unidade. </h4>
+    <h4 class="fonte">Através de reações químicas balanceadas pode-se fazer relações entre massa, matéria, constante de avogrado (moléculas-átomo), volume etc.</h4>
+    <h4 class="fonte">Podendo encontrar diferentes formas de expressar um produto de uma reação ou um reagente.<br>Nesta simulação faremos correlações entre massa e moléculas-átomo da reação química da água.</h4>
+    <h3 class="color">Atenção!</h3>
+    <h3 class="color">Instruções para fazer as correlações:</h3>
+    <h3 class="color">1° Selecione qual correlação você quer.</h3>
+    <h3 class="color">2° Selecione o elemento cuja quantidade será fornecida. Exemplo: se você que descobrir quantos gramas de H2 são necessários, terão de que serem incluidos a quantidade de mol na reação de O2 que está em moléculas-átomo.</h3>
+    <h3 class="color">3° Digite a quantidade do reagente ou produto.</h3>
+    <h3 class="color">P.S: Para fazer uma nova correlação atualize a página.</h3>
+    <input type="number" id="qtd" placeholder="Digite quantidade do elemento">
+   	<select id="tipo_correlacao">
+        <option value="1">O2(moléculas-átomo) + H2(g)</option>
+        <option value="2">H20 (moléculas-átomo) => O2(g)</option>
+    </select>
+    <select id="reagente_qtd">
+        <option value="1">O2</option>
+        <option value="2">H2</option>
+        <option value="3">H20</option>
+    </select>
+    <span id="result_final"><br>0</span>
+</body>
+<script>
+    var qtd =document.getElementById("qtd");
+    var selecttipo = document.getElementById("tipo_correlacao");
+    var selectreagente= document.getElementById("reagente_qtd");
+    var resultfinal= document.getElementById("result_final")
+    qtd.onchange= function resultcorrelacao(){
+        console.log(qtd.value);
+        var constavog= 6.02 * Math.pow(10, 23);
+        var qtd2 = parseFloat(qtd.value)
+        var tipoc = parseInt(selecttipo.value);
+        var tipor= parseInt(selectreagente.value);
+        if(tipoc==1){
+            if(tipor==3)
+                var result="Esta correlação não está disponível";
+                var resultfinal2=result;
+            if(tipor==1)
+                result= 2 * qtd2/0.5;
+                resultfinal2= "<br>0.5 . 6,02 . 10^23 O2 --- 2g H2<br>" + qtd2 + " .6,02.10^23 - x " + "<br>x= 2. " + qtd2 + ". 6.10^23/0.5.6,02.10^23<br>" + "x= " + result + " gramas de O2";
+            if(tipor==2)
+                result= qtd2* 0.5 * constavog/2;
+                resultfinal2= "<br>0.5 . 6,02 . 10^23 O2 --- 2g H2<br>" + "x --- " + qtd2 + "<br>x= 0.5. " + ". 6.10^23." + qtd2 + "/2<br>" + "x= " + result + " moléculas-átomo de H2";
+        }
+        else{
+            if(tipor==3)
+                 result= 16 * qtd2 * constavog/constavog;
+                 resultfinal2= "<br>6,02 . 10^23 H20 --- 16g O2<br>" + qtd2 + ".6,02.10^23  --- x " +  "<br>x= 16. " + qtd2 + ". 6.10^23." + qtd2 + ".6,02.10^23/6,02.10^23<br>" + "x= " + result;
+            if(tipor==2)
+                result= "Esta correlação não está disponível";
+                resultfinal2=result;
+            if(tipor==1)
+                result= qtd2*constavog*16/0.5*32;
+                resultfinal2= "<br>1.6,02.10^23 --- 16<br>" + "x --- " + qtd2 + "<br>x= 6,02.10^23. " + qtd2 + "/16<br>" + "x= " + result;
+        }
+        resultfinal.innerHTML = resultfinal2;
+    }
+  </script>
+</html>
