@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Laboratorio JS </title>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<form id="formulario" onsubmit="return false">
+			<h1>Cadastro de livros</h1>
+			<input type="text" id="title" name="titulo" placeholder="Título" />
+			<textarea
+				name="Descrição"
+				id="description"
+				placeholder="Descrição"
+			></textarea>
+			<select name="Genero" id="genre">
+				<option value="" disabled selected>Genero</option>
+				<option value="romance">romance</option>
+				<option value="drama">drama</option>
+				<option value="terror">terror</option>
+				<option value="ficção">ficção</option>
+				<option value="tecnico">tecnico</option>
+			</select>
+			<input type="search" id="author" placeholder="Autor" autocomplete="on" />
+			<button type="submit" onclick="inserir()">Cadastrar</button>
+		</form>
+		<hr />
+		<div class="subtitulo"><h1>Catálogo</h1></div>
+
+		<div id="container">
+			<div id="livros">
+				<div class="demarcacao"><b>Titulo</b></div>
+				<div class="demarcacao"><b>Descrição</b></div>
+				<div class="demarcacao"><b>Genero</b></div>
+				<div class="demarcacao"><b>Autor</b></div>
+				<div id="space"></div>
+			</div>
+			<div id="catalogo"></div>
+			<form
+				action="http://rafaelescalfoni.net/web/livros.php"
+				method="POST"
+				onsubmit="salvarbd()"
+			>
+				<input type="hidden" id="result" name="acervo_post" />
+				<button id="dbutton" type="submit">Salvar no DB</button>
+			</form>
+		</div>
+	</body>
+</html>

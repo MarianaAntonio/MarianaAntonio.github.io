@@ -1,0 +1,134 @@
+body {
+	height: 100vh;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	outline: none;
+}
+
+script {
+	display: none;
+}
+input,
+textarea,
+select {
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	border: 1px black solid;
+	padding: 5px;
+}
+
+input {
+	height: 30px;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+	border-color: rgb(116, 219, 253);
+}
+
+select {
+	height: 40px;
+}
+
+textarea {
+	height: 100px;
+}
+
+hr {
+	margin: 20px;
+}
+
+button {
+	display: block;
+	width: 100px;
+	height: 40px;
+	border-radius: 4px;
+	border: none;
+	color: black;
+	font-weight: bold;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: limegreen;
+	color: white;
+}
+
+.subtitulo {
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+#container {
+	width: 90vw;
+	margin: 0 auto;
+	position: relative;
+}
+
+#dbutton {
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+#livros {
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 0;
+	background-color: rgba(0, 0, 0, 0.05);
+	display: flex;
+	justify-content: space-around;
+}
+.textodiv {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+}
+p {
+	text-align: center;
+}
+#space {
+	width: 15px;
+	height: 10px;
+}
+
+.demarcacao {
+	display: flex;
+	justify-content: space-around;
+	width: 20%;
+}
+
+.lixeira {
+	width: auto;
+	height: auto;
+}
+
+.lixeiraimg {
+	width: 15px;
+	height: 15px;
+}
+
+.livro {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#catalogo {
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+#formulario {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	padding: 20px;
+}
