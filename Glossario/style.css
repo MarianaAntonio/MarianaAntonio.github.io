@@ -1,0 +1,29 @@
+#content {
+	display: flex;
+}
+
+#glossario {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+#description {
+	font-size: 2rem;
+	text-align: center;
+}
+
+#glossario span {
+	background-color: lime;
+	font-weight: bold;
+	width: fit-content;
+	padding: 10px;
+	margin: 4px;
+	transition: 0.2s;
+	border: 1px solid transparent;
+}
+#glossario span:hover {
+	cursor: pointer;
+	background-color: white;
+	border: 1px solid black;
+}

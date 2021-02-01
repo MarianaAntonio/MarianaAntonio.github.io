@@ -2,7 +2,7 @@ let books = [];
 
 let myrequest = new XMLHttpRequest();
 
-myrequest.open("POST", "http://rafaelescalfoni.net/web/livros.php");
+myrequest.open("POST", "https://rafaelescalfoni.net/web/livros.php");
 
 function inserir() {
 	let titulo = document.querySelector("#title");
