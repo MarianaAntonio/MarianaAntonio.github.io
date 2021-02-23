@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<style>
+			* {
+				font-family: sans-serif;
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				width: 100vw;
+				height: 100vh;
+				padding: 2rem;
+			}
+
+			.container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				width: 10.5rem;
+				padding-top: 0.5rem;
+			}
+
+			.s1 {
+				border-bottom: red solid 5px;
+				visibility: hidden;
+				width: 2.25rem;
+				height: 2px;
+			}
+			.s2 {
+				border-bottom: orange 5px solid;
+				width: 2.25rem;
+				visibility: hidden;
+				height: 2px;
+			}
+			.s3 {
+				border-bottom: GreenYellow 5px solid;
+				width: 2.25rem;
+				visibility: hidden;
+				height: 2px;
+			}
+			.s4 {
+				width: 2.25rem;
+				height: 2px;
+				visibility: hidden;
+				border-bottom: lime solid 5px;
+			}
+		</style>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>9</title>
+		<script src="nono.js" defer></script>
+	</head>
+	<body>
+		<h1>Verifique a força de sua senha</h1>
+		<input type="password" oninput="changeHandler()" />
+		<div class="container">
+			<div class="s1"></div>
+			<div class="s2"></div>
+			<div class="s3"></div>
+			<div class="s4"></div>
+		</div>
+	</body>
+</html>
