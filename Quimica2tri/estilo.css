@@ -1,0 +1,42 @@
+body {
+		 
+    
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-left :30px;
+    margin-right :20px;
+     }
+h1{
+       font-family: "Lucida Handwriting", "Arial", cursiva;
+        font-size: 34px;
+            color: rgb(48, 155, 173);
+        position: center;
+}
+h2{
+    
+    font-family: "Monaco", "Arial", monoespaço;
+        font-size: 24px;
+            color: rgb(248, 176, 216);
+}
+
+h3{
+    
+    font-family: "Monaco", "Arial", monoespaço;
+        font-size: 20px;
+            color: rgb(90, 206, 235);
+}
+p{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+i{
+			
+    width: 50px;
+    color: rgb(33, 99, 199) ;
+    
+}
