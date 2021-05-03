@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Atividade 3</title>
+	<meta charset="utf-8">
+   
+</head>
+<body>
+    <h1>Iterações em Arrays usando map, filter e reduce</h1>
+    <h1>Lista: [1, 2, 3, 4, 5, 6]</h1>
+    <h3>- O array considerado para as funções no código -</h3>
+    <h2 id="result"></h2>
+    <h2 id="result2"></h2>
+    <h2 id="result3"></h2>
+    </br></br></br>
+</body>
+    <script>
+        const lista = new Array(1, 2, 3, 4, 5, 6);
+        Array.prototype.double= function() {
+            let result1 = this.map(value => [value, value]);
+            let resp1 = "Os valores duplicados são: ";
+            resp1+= result1;
+            document.getElementById("result").innerHTML=resp1;
+        };
+        Array.prototype.evenElements= function() {
+            let result2 = this.filter(value => value % 2== 0);
+            let resp2 = "Os valores pares são: ";
+            resp2+= result2;
+            document.getElementById("result2").innerHTML=resp2;
+        };
+        Array.prototype.sum= function() {
+            let result3 = this.reduce((value, cvalue) => value + cvalue);
+            let resp3 = "A soma da lista é: ";
+            resp3+= result3 ;
+            document.getElementById("result3").innerHTML=resp3;
+        };
+        (lista.double());
+        (lista.evenElements());
+        (lista.sum());
+    </script>
+</html>
