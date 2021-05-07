@@ -1,0 +1,142 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+  }
+button{
+     background-color: pink;
+     color: brown;
+}
+h1{
+    font-family: "Lucida Handwriting", "Arial", cursive;
+}
+h2{
+    font-family: "Lucida Handwriting", "Arial", cursive;
+    color: rgb(245, 90, 116);
+}
+h3{
+    color: rgb(245, 90, 116);
+    font-family: "Lucida Handwriting", "Arial", cursive;
+}
+li{
+    padding-top: 15spx;
+    list-style: circle;
+}
+textarea:hover, select:hover{
+    background-color:rgb(243, 231, 62);
+}
+.button {
+    color: black;
+    background-color: rgb(248, 136, 155);
+    font-weight: bolder;
+    font-family: monospace;
+    border-radius: 30px;
+    position: absolute;
+    left: 525px;
+    width: 300px;
+    height: 40px;
+}
+.buttonback{
+    color: rgb(0, 0, 0);
+    background-color: rgb(248, 136, 155);
+    font-weight: bolder;
+    font-family: monospace;
+    border-radius: 30px;
+    position: absolute;
+    left: 25px;
+    top: 500px;
+    width: 100px;
+    height: 30px;
+}
+button:hover, input:hover{
+    background-color: rgb(138, 235, 83);
+}
+#solvente1:hover, #solvente2:hover{
+    background-color: rgb(200, 117, 207);
+}
+#soluto1:hover, #soluto2:hover{
+    background-color: rgb(241, 197, 74);
+}
+a:hover{
+    color:rgb(223, 168, 17);
+}
+a{
+    color:black;
+}
+.back{
+    left: 0px;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    color: rgb(12, 119, 151);
+    font-weight: bolder;
+    font-family: monospace;
+}
+fieldset{
+    border-radius: 12px;
+    background-color: rgb(232, 235, 79);
+    border: 3px solid rgb(19, 19, 17);
+    width: 600px;
+    height: 725px;
+    position: absolute;
+    left:330px;
+}
+.button2 {
+    background-color: rgb(248, 136, 155);
+    font-weight: bolder;
+    font-family: monospace;
+    border-radius: 30px;
+    position: absolute;
+    left: 520px;
+    width: 300px;
+    height: 40px;
+}
+#solvente1, #solvente2{
+    background-color: rgb(87, 210, 226);
+    position: absolute;
+    left: 522px;
+    top:280px;
+}
+#soluto2, #soluto1{
+    background-color: rgb(232, 235, 79);
+    position: absolute;
+    left: 522px;
+    top:200px;
+}
+input {
+    width: 300px;
+    height: 35px;
+    top:375px;
+    font-family: monospace;
+    color: black;
+}
+#calcular{
+    width: 175px;
+    height: 35px;
+    left: 585px;
+    top: 365px;
+}
+#resposta{
+    color: black;
+    position:absolute;
+    top: 195px;
+    left: 865px;
+    right: 10px;
+    font-family: monospace;
+}
+#calculo{
+    color: black;
+    position:absolute;
+    top: 195px;
+    left: 45px;
+    font-family: monospace;
+}
+#img1{
+    position:absolute;
+    top:20px;
+    left: 140px;
+}
+#img2{
+    position:absolute;
+    top:20px;
+    right: 140px;
+}

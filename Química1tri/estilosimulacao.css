@@ -1,0 +1,37 @@
+body {
+    background-color: lightblue;
+  }
+button{
+     background-color: pink;
+     color: brown;
+}
+h1{
+    font-family: "Lucida Handwriting", "Arial", cursive;
+}
+h2{
+    font-family: "Monaco", "Arial", monospace;
+}
+h3{
+    color: rgb(245, 90, 116);
+    font-family: "Lucida Handwriting", "Arial", cursive;
+}
+h4{
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+h3.color{
+            color: rgba(212, 21, 21, 0.897);
+            font-family: "Helvetica", "Arial", sans-serif;
+}
+h4.fonte{
+             font-family: "Lucida Handwriting", "Arial", cursive;
+}
+select, input, option{
+            color: rgb(255, 16, 56);
+            background-color: rgb(80, 192, 230);
+            font-weight: bold;
+}
+p{
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+}
+}

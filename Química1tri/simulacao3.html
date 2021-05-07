@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./estilosimulacao.css" media="screen"/>
+</head>
+<body>
+    <h1>Reação com reagente limitante H2O (água)</h1>
+    <h2>Entenda sobre reações teóricas em estequiometria!</h2>
+    <h3>O que é reagente limitante?</h3>
+    <p>Reagente limitante é aquele que limita a quantidade de produto que pode ser produzido na reação. Isso significa que quando o reagente limitante é totalmente consumido, a reação para, mesmo tendo ainda outros reagentes.
+
+        Todos os outros reagentes que sobrarem são considerados reagentes em excesso.  </p>
+    <h2>1 H2 + 1/2 O2 (g) =>  1 H20(g)</h2>
+    <input type="number" id="h2" placeholder="Digite quantidade de H2"/>
+    <input type="number" id="o2"placeholder="Digite quantidade de O2 "/>
+    <button onClick="calcula()"><strong>Calcular</strong></button>
+    <h2 id="resultfinal"></h2>
+    <h2 id="result2"></h2>
+    <h2 id="result"></h2>
+</body>
+<script>
+    function calcula(){
+        var h2= parseFloat(document.getElementById("h2").value);
+        var o2= parseFloat(document.getElementById("o2").value);
+        var h2o= 18;
+        var o2grama= 16;
+        var descobre= o2grama* h2;
+        if(o2==h2)
+            var result2= "Sem reagente limitante e sem reagente em excesso.";
+        else{
+            if(descobre<o2){
+                var limit= h2;
+                var esc= o2;
+            }
+            else{
+                limit= o2;
+                esc= h2;
+            }
+            if(limit==o2){
+                var result= h2o*o2/o2grama;
+                result2= "Reagente limitante: O2"  + "<br>Quantidade do reagente limitante: " + o2 + "(g)" + "<br>Quantidade de H20 formado: " + result + " gramas";
+            }
+            else{
+                result= h2*h2o;
+                result2= "Reagente limitante: H2 " + "<br>Quantidade do reagente limitante: " + h2 + " mol " + "<br>Quantidade de H20 formado: " + result + " gramas<br>";
+            }
+            if(esc==o2)
+                var calcexc= o2-(o2grama* h2);
+            else
+                calcexc= h2-(o2/o2grama);
+        
+            if(esc==o2)
+                var resultfinal= "1° Passo: Descobrir o reagente em excesso e o reagente limitante. " + "<br>Pode-se fazer esta conta através do 1° ou 2° reagente:<br>" + "1 H2 --- 32g de O2<br>" + h2 + " --- x<br>" + "x= 32 . " + h2 + "/1<br>" + o2  + " - " + (o2grama*h2) + " = " + calcexc + "<br>O excesso é de " + calcexc + " gramas " + " de O2 " + "<br>Assim, O2 está em excesso e H2 é limitante<br>" + "2° Passo: Calcular a quantidade de produto formado por H2.<br> " + "1 H2 --- 18g de H2O<br>" + h2 + " --- y<br>" + "y= 18. " + h2 + "/1<br>" + "y= " + result + " gramas de H2O<br>";
+            else
+                resultfinal= "1° Passo: Descobrir o reagente em excesso e o reagente limitante. " + "<br>Pode-se fazer esta conta através do 1° ou 2° reagente:<br>" + "1 H2 --- 32g de O2<br>" + " x --- " + o2 + "<br>" + "x= 1. " + o2 + "/32<br>" + h2 + " - " + (o2/o2grama) + " = " + calcexc + "<br>O excesso é de " + calcexc + " de H2 "  + "<br>Assim, H2 está em excesso e O2 é limitante<br>" + "2° Passo: Calcular a quantidade de produto formado por O2.<br> " + o2grama + " --- 18g de H2O<br>" + o2 + " --- y<br>" + "y= 18. " + o2 + "/" + o2grama + "<br>" + " y= " + result + " gramas de H2O<br>";
+        }
+        document.getElementById("resultfinal").innerHTML = resultfinal;
+        document.getElementById("result2").innerHTML = result2;
+    }
+</script>
+fonte: https://mundoeducacao.uol.com.br/quimica/reagente-excesso-reagente-limitante.html
+</html>
