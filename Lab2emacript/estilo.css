@@ -1,0 +1,28 @@
+a{
+	font-family: 'Optima', serif;
+	font-size : 20px;
+	color: rgb(0,100,0);	
+}
+h4 {
+	font-family: 'Optima', serif;
+	color: rgb(68, 5, 83);	
+	text-align: center;
+}	
+h1,h2,h3{
+	font-family: 'Optima', serif;
+	color: rgb(68, 5, 83);
+}
+p{
+	font-family: 'Optima', serif;
+	font-size : 20px;
+	color: rgb(68, 5, 83);	
+}
+.button {
+    background-color: rgb(224,255,255);
+    padding: 2px 2px;
+}
+.retorno {
+  background-color: rgb(224,255,255);
+  padding: 2px 2px;
+  }
+#acervo img {width: 18px; height: 20px;}
